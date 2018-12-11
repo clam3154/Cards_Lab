@@ -37,6 +37,12 @@ public class Deck
 
     public shuffle()
     {
+        for(int i =0; i<Dealt.size(); i++)
+        {
+            Card sub = Dealt.get(0);
+            unDealt.add(sub);
+            Dealt.remove(0);
+        }
         for(int k = 51; k > 1; k--)
         {
             
