@@ -12,18 +12,27 @@ public class Deck
 
     public boolean isEmpty()
     {
-        return true;
+        if (unDealt.size() == 0)
+        {
+            return true;
+        }
+        return false;
     }
-
     public int size()
     {
-        int num = 0;
-        return num;
+        return unDealt.size();
     }
 
-    public deal()
+    public Card deal()
     {
-
+        if(unDealt.isEmpty())
+        {
+            return null;
+        }
+        Card sub = unDealt.get(0);
+        Dealt.add(sub);
+        unDealt.remove(0);
+        return sub;
     }
 
     public shuffle()
