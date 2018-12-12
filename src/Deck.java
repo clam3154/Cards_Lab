@@ -7,7 +7,7 @@ public class Deck
 
     public Deck(String rank, String suit, int pointValue)
     {
-
+        
     }
 
     public boolean isEmpty()
@@ -35,7 +35,7 @@ public class Deck
         return sub;
     }
 
-    public shuffle()
+    public void shuffle()
     {
         for(int i =0; i<Dealt.size(); i++)
         {
@@ -45,7 +45,11 @@ public class Deck
         }
         for(int k = 51; k > 1; k--)
         {
-            
+            int rand1 = (int)(Math.random()*k);
+            int rand2 = (int)(Math.random()*k);
+            Card temp = unDealt.get(rand1);
+            unDealt.set(rand1,unDealt.get(rand2));
+            unDealt.set(rand2,temp);
         }
     }
 }
