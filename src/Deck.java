@@ -2,12 +2,17 @@ import java.util.ArrayList;
 
 public class Deck
 {
+    private String rank;
+    private String suit;
+    private int pointValue;
     ArrayList<Card> unDealt;
     ArrayList<Card> Dealt;
 
     public Deck(String rank, String suit, int pointValue)
     {
-        
+        this.rank = rank;
+        this.suit = suit;
+        this.pointValue = pointValue;
     }
 
     public boolean isEmpty()
