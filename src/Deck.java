@@ -7,15 +7,12 @@ public class Deck
 
     public Deck(String[] rank, String[] suit, int[] pointValue)
     {
+        unDealt = new ArrayList<Card>();
         for(int i = 0; i < suit.length; i++)
         {
-            for(int j = 0; j<rank.length; j++)
+            for(int j = 0; j<rank.length-1; j++)
             {
-                for (int k = 0; k < 3; k++)
-                {
-                    
-                    unDealt.add()
-                }
+                unDealt.add(0,new Card(rank[j],suit[i],pointValue[j]));
             }
         }
     }
